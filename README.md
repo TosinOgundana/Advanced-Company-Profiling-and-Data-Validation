@@ -18,7 +18,7 @@ Smart enrichment logic prioritized API data with fallback to original values for
 
 ## Deliverables
 
-- `task solution.ipynb`: Complete notebook with logic and outputs
+- `task_solution.ipynb`: Complete notebook with logic and outputs
 - `final_enriched.csv`: Exported enriched dataset
 - `README.md`: This file
 
