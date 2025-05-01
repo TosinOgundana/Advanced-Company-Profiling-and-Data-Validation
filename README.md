@@ -1,5 +1,4 @@
 # Advanced Company Profiling and Data-Validation
-# Data Enrichment Task
 
 ## Overview
 
