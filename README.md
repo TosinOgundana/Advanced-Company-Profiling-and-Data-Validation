@@ -26,7 +26,18 @@ Smart enrichment logic prioritized API data with fallback to original values for
 
 - Matching was primarily done using `company_number` for high accuracy
 - Validation used fuzzy matching for name/address and exact matching for identifiers
-- All visualizations were optional and excluded to keep the solution lightweight
+- Match rate visualisation 
+
+## Requirements
+
+- Python 3.8+
+- Libraries: `pandas`, `matplotlib`, `re`, `requests`, `difflib`
+
+---
+
+## Acknowledgements
+
+- Companies House API (https://developer.company-information.service.gov.uk)
 
 ---
 
