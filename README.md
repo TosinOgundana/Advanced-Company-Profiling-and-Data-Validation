@@ -23,9 +23,10 @@ It combines original company data with external enrichment from the **Companies 
    - Dropped columns with >90% missing values
    - Renamed and converted fields to snake_case
    - Standardized text casing and formats
+   - Deduplication
 
 3. **Enrichment**:
-   - **Companies House API**: Enriched fields like name, address, and status
+   - **Companies House API**: Enriched fields like name and registered address
    - **Postcodes.io API**: Fetched city, county, and country based on postcode
    - Prioritized API values using `combine_first()` logic
 
