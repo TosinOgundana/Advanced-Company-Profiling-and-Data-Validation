@@ -15,6 +15,9 @@ Smart enrichment logic prioritized API data with fallback to original values for
 - 📊 Reporting on match rates
 - 📁 Export of final enriched file
 
+## Data Workflow
+![Untitled Diagram](https://github.com/user-attachments/assets/4d61352e-c42a-4ddb-95a6-5ba99415837f)
+
 ## Deliverables
 
 - `task_solution.ipynb`: Complete notebook with logic and outputs
