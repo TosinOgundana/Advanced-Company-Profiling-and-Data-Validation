@@ -1,46 +1,86 @@
-# Advanced Company Profiling and Data-Validation
+# Advanced Company Profiling and Data Validation
 
-## Overview
+## 🚀 Overview
 
-This project profiles, cleanses, enriches, and validates contact information from a sample UK company dataset.  
-Using the Companies House API, company records were matched, deduplicated, and enriched with official metadata.  
-Smart enrichment logic prioritized API data with fallback to original values for completeness.
+This project demonstrates an end-to-end data engineering solution that profiles, cleanses, validates, enriches, and visualizes a sample of UK company records.  
+It combines original company data with external enrichment from the **Companies House API** and **Postcodes.io**, prioritizing high-quality, validated registered contact information.
 
-## Steps Completed
+## 📊 Objectives
 
-- 🔍 Data profiling & null analysis
-- 🧹 Data cleaning (column names, types, casing, nulls)
-- 🔗 API integration using Company Number
-- ✅ Field-by-field validation (fuzzy match & exact match)
-- 📊 Reporting on match rates
-- 📁 Export of final enriched file
+- Clean and standardize messy business records
+- Match company details via `company_number`
+- Enrich missing fields using authoritative APIs
+- Validate enrichment using fuzzy and exact logic
+- Visualize match effectiveness and enrichment coverage
 
-## Data Workflow
-![Untitled Diagram](https://github.com/user-attachments/assets/4d61352e-c42a-4ddb-95a6-5ba99415837f)
+---
 
-## Deliverables
+## 🛠️ Workflow Summary
 
-- `task_solution.ipynb`: Complete notebook with logic and outputs
-- `final_enriched.csv`: Exported enriched dataset
-- `README.md`: This file
+1. **Profiling**: Dataset inspection and null analysis
 
-## Notes
+2. **Cleaning**:
+   - Dropped columns with >90% missing values
+   - Renamed and converted fields to snake_case
+   - Standardized text casing and formats
 
-- Matching was primarily done using `company_number` for high accuracy
-- Validation used fuzzy matching for name/address and exact matching for identifiers
-- Match rate visualisation 
+3. **Enrichment**:
+   - **Companies House API**: Enriched fields like name, address, and status
+   - **Postcodes.io API**: Fetched city, county, and country based on postcode
+   - Prioritized API values using `combine_first()` logic
 
-## Requirements
+4. **Validation**:
+   - Applied fuzzy matching for names and addresses using `difflib`
+   - Used exact string match for structured fields
+   - Counted and visualized match rates
+
+5. **Caching**:
+   - Implemented local caching to avoid redundant API calls
+
+6. **Visualization**:
+   - Compared original vs enriched fields
+   - Displayed match rates by column using bar charts
+
+---
+
+## 📁 Deliverables
+
+- `task_solution.ipynb`: Main Jupyter Notebook with logic and outputs
+- `final_enriched.csv`: Final enriched dataset with validated fields
+- `README.md`: This documentation
+
+---
+
+## 📊 Visual Summary
+
+![Data Workflow](https://github.com/user-attachments/assets/4d61352e-c42a-4ddb-95a6-5ba99415837f)
+
+---
+
+## 🔍 Validation Logic
+
+- `company_number`: used for precise record matching
+- Fuzzy match: for `company_name`, `address_line_1`, `address_line_2`
+- Exact match: for `post_code`, `city`, `county`, `country`
+- Match statistics were computed per column and visualized
+
+---
+
+## 🧰 Technologies Used
 
 - Python 3.8+
-- Libraries: `pandas`, `matplotlib`, `re`, `requests`, `difflib`
+- `pandas`, `matplotlib`, `re`, `requests`, `difflib`
+
+- APIs:
+  - [Companies House](https://developer.company-information.service.gov.uk)
+  - [Postcodes.io](https://postcodes.io/)
 
 ---
 
-## Acknowledgements
+## 📦 How to Run
 
-- Companies House API (https://developer.company-information.service.gov.uk)
+1. Clone this repo and open `final_enriched.ipynb`
+2. Install required packages (if needed):
 
----
-
-
+   ```bash
+   pip install pandas requests matplotlib
