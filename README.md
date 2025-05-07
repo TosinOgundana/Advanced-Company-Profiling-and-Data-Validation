@@ -80,8 +80,17 @@ It combines original company data with external enrichment from the **Companies 
 
 ## 📦 How to Run
 
-1. Clone this repo and open `final_enriched.ipynb`
+1. Clone this repo and open `task_solution.ipynb`
 2. Install required packages (if needed):
 
    ```bash
    pip install pandas requests matplotlib
+   
+3. Add your Companies House API key where indicated in the notebook
+4. Run each cell in order
+
+## 🙏 Acknowledgements
+
+Companies House API
+Postcodes.io API
+CluedIn for the use case task
