@@ -91,6 +91,6 @@ It combines original company data with external enrichment from the **Companies 
 
 ## 🙏 Acknowledgements
 
-Companies House API
-Postcodes.io API
-CluedIn for the use case task
+- Companies House API
+- Postcodes.io API
+- CluedIn for the use case task
