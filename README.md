@@ -52,7 +52,7 @@ It combines original company data with external enrichment from the **Companies 
 
 ---
 
-## 📊 Visual Summary
+## 📊 Data Integration Visual
 
 ![Data Workflow](https://github.com/user-attachments/assets/4d61352e-c42a-4ddb-95a6-5ba99415837f)
 
